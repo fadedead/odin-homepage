@@ -2,6 +2,7 @@ const PandaOne = require("./assets/panda-one.jpg");
 
 function getAboutUs() {
   const aboutUs = document.createElement("div");
+  aboutUs.classList.add("about-us");
 
   const imageContainer = document.createElement("div");
   imageContainer.classList.add("about-image-container");

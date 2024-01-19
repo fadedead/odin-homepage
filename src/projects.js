@@ -2,17 +2,26 @@ const Github = require("./assets/github-icon.svg");
 const ExternalLink = require("./assets/open-in-new.svg");
 
 function getProjects() {
+  const myWorkContainer = document.createElement("div");
+
+  const myWork = document.createElement("h3");
+  myWork.innerText = "My work";
+  myWorkContainer.appendChild(myWork);
+
   const projectsContainer = document.createElement("div");
+  projectsContainer.classList.add("projects-container");
 
   for (let i = 0; i <= 5; i++) {
     const project = document.createElement("div");
+    project.classList.add("project");
 
     const image = document.createElement("div");
     image.innerText = "Screenshot of project";
-    image.style = "min-height: 100px; background-color: blue";
+    image.style = "height: 60%; background-color: blue";
     project.appendChild(image);
 
     const nameLinkContainer = document.createElement("div");
+    nameLinkContainer.classList.add("project-name-link");
 
     const name = document.createElement("p");
     name.innerText = "Project Name";
@@ -22,10 +31,12 @@ function getProjects() {
 
     const github = new Image();
     github.src = Github;
+    github.classList.add("project-link");
     links.appendChild(github);
 
     const externalLink = new Image();
     externalLink.src = ExternalLink;
+    externalLink.classList.add("project-link");
     links.appendChild(externalLink);
 
     nameLinkContainer.appendChild(links);
@@ -40,7 +51,9 @@ function getProjects() {
     projectsContainer.appendChild(project);
   }
 
-  return projectsContainer;
+  myWorkContainer.appendChild(projectsContainer);
+
+  return myWorkContainer;
 }
 
 module.exports = { getProjects };
