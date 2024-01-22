@@ -15,6 +15,16 @@ h3 {
 	flex-direction: column;
 }
 
+.links-image {
+	height: 2rem;
+}
+
+.about-dev-container {
+	display: flex;
+	gap: 1rem;
+	align-self: center;
+}
+
 .about-us {
 	margin: 1rem;
 
@@ -72,4 +82,10 @@ h3 {
 
 .project-link {
 	height: 1rem;
+}
+
+.footer {
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
 }

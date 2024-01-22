@@ -1,5 +1,8 @@
+const { getLinks } = require("./links");
+
 function getFooter() {
   const footerContainer = document.createElement("div");
+  footerContainer.classList.add("footer");
 
   const footerTitle = document.createElement("h3");
   footerTitle.innerText = "Contact me";
@@ -22,7 +25,9 @@ function getFooter() {
 
   footerContainer.appendChild(footerInfo);
 
-  // const devLinks = getDevIcons() ;
+  const iconsContainer = getLinks();
+  iconsContainer.classList.add("about-dev-container");
+  footerContainer.appendChild(iconsContainer);
 
   return footerContainer;
 }

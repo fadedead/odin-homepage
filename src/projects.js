@@ -17,7 +17,8 @@ function getProjects() {
 
     const image = document.createElement("div");
     image.innerText = "Screenshot of project";
-    image.style = "height: 60%; background-color: blue";
+    image.style =
+      "height: 60%; background-color: #c3bef0; display: flex; justify-content: center; align-items: center;";
     project.appendChild(image);
 
     const nameLinkContainer = document.createElement("div");

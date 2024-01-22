@@ -1,4 +1,5 @@
 const PandaOne = require("./assets/panda-one.jpg");
+const { getLinks } = require("./links");
 
 function getAboutUs() {
   const aboutUs = document.createElement("div");
@@ -36,7 +37,7 @@ function getAboutUs() {
   aboutUs.appendChild(aboutContainer);
 
   // Icons
-  const iconsContainer = document.createElement("div");
+  const iconsContainer = getLinks();
   iconsContainer.classList.add("about-dev-container");
   aboutUs.appendChild(iconsContainer);
 
