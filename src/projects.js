@@ -26,6 +26,7 @@ function getProjects() {
 
     const name = document.createElement("p");
     name.innerText = "Project Name";
+    name.classList.add("project-name");
     nameLinkContainer.appendChild(name);
 
     const links = document.createElement("div");

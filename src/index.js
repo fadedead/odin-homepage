@@ -3,8 +3,6 @@ import { getFooter } from "./footer";
 import { getProjects } from "./projects";
 import "./style.css";
 
-console.log("Hello Fadedead");
-
 function app() {
   const content = document.getElementById("content");
 

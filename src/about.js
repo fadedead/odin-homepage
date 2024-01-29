@@ -21,6 +21,10 @@ function getAboutUs() {
 
   aboutUs.appendChild(imageContainer);
 
+  // Information container
+  const infoContainer = document.createElement("div");
+  infoContainer.classList.add("info-container");
+
   // About information
   const aboutContainer = document.createElement("div");
 
@@ -34,12 +38,14 @@ function getAboutUs() {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus tellus nulla, at dapibus diam tristique eget. Pellentesque ultrices imperdiet nunc, eget tempor erat sodales in. Vestibulum sodales arcu faucibus odio gravida imperdiet.";
   aboutContainer.appendChild(aboutInfo);
 
-  aboutUs.appendChild(aboutContainer);
+  infoContainer.appendChild(aboutContainer);
 
   // Icons
   const iconsContainer = getLinks();
   iconsContainer.classList.add("about-dev-container");
-  aboutUs.appendChild(iconsContainer);
+  infoContainer.appendChild(iconsContainer);
+
+  aboutUs.appendChild(infoContainer);
 
   return aboutUs;
 }
